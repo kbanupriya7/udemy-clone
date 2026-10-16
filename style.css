@@ -79,7 +79,7 @@ body {
 }
 .recommended-section__courses {
   width: 250px;
-  height: 250px;
+  height: 300px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
@@ -151,7 +151,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 20px;
 }
 /* footer-section */
 .footer-section {
