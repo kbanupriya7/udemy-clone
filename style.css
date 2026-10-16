@@ -150,7 +150,7 @@ body {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   gap: 8px;
 }
 /* footer-section */
