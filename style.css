@@ -13,7 +13,7 @@ body {
   border-bottom: 1px solid rgb(209, 207, 207);
   position: sticky;
   top: 0;
-  background-color:white;
+  background-color: white;
   z-index: 1;
 }
 .navbar-container__leftsection__title {
@@ -45,36 +45,36 @@ body {
   gap: 20px;
   cursor: pointer;
 }
-.navbar-container__rightsection p{
+.navbar-container__rightsection p {
   margin: 0;
 }
-.navbar-container__rightsection__mylearning{
+.navbar-container__rightsection__mylearning {
   position: relative;
   top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.mylearning__popup{
+.mylearning__popup {
   padding: 5px;
   border: 1px solid black;
   width: 100px;
   text-align: justify;
   position: absolute;
-  top: 150%; 
+  top: 150%;
   right: 0;
   background-color: white;
   display: none;
 }
-.navbar-container__rightsection__mylearning:hover .mylearning__popup{
+.navbar-container__rightsection__mylearning:hover .mylearning__popup {
   display: block;
 }
-.bell-box{
+.bell-box {
   width: fit-content;
   position: relative;
   padding: 10px;
 }
-.bell-box__para{
+.bell-box__para {
   margin: 0;
   width: fit-content;
   background-color: red;
@@ -100,29 +100,46 @@ body {
   border-radius: 20px;
   color: aliceblue;
   cursor: pointer;
-  transition: 4s;
+  border: 2px solid transparent;
 }
 .categories-section__items:hover {
-  background-color: #4a0478;
-  color: white;
+  background-color: transparent;
+  color: black;
+  border: 2px solid #a435f0;
+  transition: 1s;
 }
 /* sale-image */
 .sale-image img {
   width: 100%;
   position: relative;
 }
-.sale-image__offer h2,p{
+.sale-image__offer h2,
+p {
   margin-top: 10px;
 }
-.sale-image__offer{
+.sale-image__offer {
   width: 350px;
   background-color: white;
   padding: 40px;
   position: absolute;
   top: 30%;
   left: 10%;
+  animation-name: zoom;
+  animation-duration: 4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
-.sale-image__offer__button{
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.sale-image__offer__button {
   margin-top: 10px;
   background-color: #a435f0;
   padding: 10px;
@@ -131,13 +148,22 @@ body {
   cursor: pointer;
   border: none;
   font-weight: bolder;
+  animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
 }
 /* Recommended */
 .recommended-section {
   padding: 10px;
- 
 }
-.recommended-section__title,.recommended-section__subtitle {
+.recommended-section__title,
+.recommended-section__subtitle {
   margin-top: 10px;
 }
 .recommended-section__course-container {
@@ -206,6 +232,7 @@ body {
 .topics-section__container__topiclists:hover {
   background-color: grey;
   color: azure;
+  transition: 0.2s;
 }
 /* Popular-section */
 .popular-section {
