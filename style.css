@@ -11,6 +11,10 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(209, 207, 207);
+  position: sticky;
+  top: 0;
+  background-color:white;
+  z-index: 1;
 }
 .navbar-container__leftsection__title {
   font-size: 20px;
@@ -29,6 +33,7 @@ body {
   padding: 5px;
   border: none;
   width: 60%;
+  outline: transparent;
 }
 .navbar-container__centersection input:focus {
   outline: none;
@@ -36,8 +41,51 @@ body {
 .navbar-container__rightsection {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
+  cursor: pointer;
 }
+.navbar-container__rightsection p{
+  margin: 0;
+}
+.navbar-container__rightsection__mylearning{
+  position: relative;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mylearning__popup{
+  padding: 5px;
+  border: 1px solid black;
+  width: 100px;
+  text-align: justify;
+  position: absolute;
+  top: 150%; 
+  right: 0;
+  background-color: white;
+  display: none;
+}
+.navbar-container__rightsection__mylearning:hover .mylearning__popup{
+  display: block;
+}
+.bell-box{
+  width: fit-content;
+  position: relative;
+  padding: 10px;
+}
+.bell-box__para{
+  margin: 0;
+  width: fit-content;
+  background-color: red;
+  padding: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  font-size: 8px;
+}
+
 /* categories */
 .categories-section {
   padding: 10px;
@@ -61,6 +109,28 @@ body {
 /* sale-image */
 .sale-image img {
   width: 100%;
+  position: relative;
+}
+.sale-image__offer h2,p{
+  margin-top: 10px;
+}
+.sale-image__offer{
+  width: 350px;
+  background-color: white;
+  padding: 40px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.sale-image__offer__button{
+  margin-top: 10px;
+  background-color: #a435f0;
+  padding: 10px;
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+  font-weight: bolder;
 }
 /* Recommended */
 .recommended-section {
@@ -79,7 +149,7 @@ body {
 }
 .recommended-section__courses {
   width: 250px;
-  height: 250px;
+  height: 280px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
